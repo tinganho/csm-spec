@@ -6,11 +6,8 @@ Slim is a package/dependency manager for JavaScript. It analyze your code to eff
 Module dependencies
 ```javascript
 import module1 from 'Module1';
+
 export default class Slim {
-  constructor() {
-
-  },
-
   test1() {
 
   }
