@@ -1,10 +1,10 @@
 SLIM
 ====
 
-Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function.
+Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function. It is also the ES6+ package manager and for client and server side rendered applications.
 
 ## Contents
-[PackageDefinition][]
+[Package][PackageDefinition]
 
 ## Module definition
 ```javascript
@@ -53,5 +53,67 @@ You must make annotations in your code to mark if a function is for server-side 
 ```
 // @universal
 ```
+
+## Package definition
+You must define your package in package.json. Just like NPM!
+```
+{
+  "name": "slim",
+  "description": "Slim is a package/dependency manager for JavaScript that does function "shaking.",
+  "exports": "Slim"
+  "version": "2.0.1",
+  "homepage": "https://github.com/tinganho/l10ns",
+  "author": {
+    "name": "Tingan Ho",
+    "email": "tingan87@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tinganho/l10ns.git"
+  },
+  "dependencies": {
+    "test": "2.0.1"
+  },
+  "devDepencies": {
+    "test": "2.0.1"
+  },
+  "main": "index.js"
+}
+```
+
+### name
+Name of your package.
+
+### description
+Description of your package.
+
+### version
+The semantic versioning of your package.
+
+### homepage
+The official website of your package.
+
+### author
+Authors:
+
+```json
+{
+  name: "Tingan Ho",
+  email: "tingan87@gmail.com"
+}
+```
+
+### repository
+Official repository:
+```json
+{
+  "type": "git",
+  "url": "git://github.com/tinganho/l10ns.git"
+}
+```
+
+
+### maintainers
+
 
 [PackageDefinition]: ./PackageDefinition.md
