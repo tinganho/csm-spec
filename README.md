@@ -98,8 +98,8 @@ Authors:
 
 ```json
 {
-  name: "Tingan Ho",
-  email: "tingan87@gmail.com"
+  "name": "Tingan Ho",
+  "email": "tingan87@gmail.com"
 }
 ```
 
@@ -114,6 +114,5 @@ Official repository:
 
 
 ### maintainers
-
 
 [PackageDefinition]: ./PackageDefinition.md
