@@ -3,7 +3,7 @@ SLIM
 
 Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function.
 
-Module dependencies
+## Module definition
 ```javascript
 import module1 from 'Module1';
 
