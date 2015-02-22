@@ -54,4 +54,4 @@ You must make annotations in your code to mark if a function is for server-side 
 // @universal
 ```
 
-[PackageDefinition]: ./PackageDefinition.
+[PackageDefinition]: ./PackageDefinition.md
