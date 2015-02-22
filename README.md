@@ -61,7 +61,7 @@ You must define your package in package.json. Just like NPM!
 ```json
 {
   "name": "slim",
-  "description": "Slim is a package/dependency manager for JavaScript that does function "shaking.",
+  "description": "Slim is a package/dependency manager ...",
   "exports": "Slim"
   "version": "2.0.1",
   "homepage": "https://github.com/tinganho/l10ns",
