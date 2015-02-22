@@ -3,7 +3,7 @@ SLIM
 
 Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently function shaking.
 
-package.json
+You must define your package in package.json. Just like NPM!
 ```
 {
   name: "slim",
@@ -30,10 +30,8 @@ package.json
 
 Module dependencies
 ```javascript
-requires('Module1');
-exports('slim', Slim);
-
-class Slim {
+import module1 from 'Module1';
+export default class Slim {
   constructor() {
 
   },
@@ -43,20 +41,39 @@ class Slim {
   }
 
   // Public functions
+  // @universal
   test2() {
     this.test();
   },
 
   // Private function
+  // @client
   test3_() {
 
   }
 }
 ```
 
-If I later decides in an another file to only use mothed `test3()`. Then, method `test2()` will not be compiled.
+If I later decides in an another file to only use mothed `test3()`. Then, method test2()` will not be compiled.
 
 ```javascript
 require('Slim');
 slim.test3();
+```
+
+## Annotations
+
+### Client-side usage:
+```
+// @client
+```
+
+### Server-side usage:
+```
+// @client
+```
+
+### Universal usage:
+```
+// @client
 ```
