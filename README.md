@@ -10,7 +10,7 @@ import module1 from 'Module1';
 export default class Slim {
   test1() {
 
-  }
+  },
 
   // Public functions
   // @universal
