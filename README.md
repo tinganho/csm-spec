@@ -1,12 +1,14 @@
 SLIM
 ====
 
-Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function. It is also the ES6+ package manager and for client and server side rendered applications.
+Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function. It is also the ES6+ package manager for Client-Server Rendered Applications.
 
 ## Contents
-[Package][PackageDefinition]
+[Module](#module)
+[Annotations](#annotations)
+[Package](#package)
 
-## Module definition
+## Module
 ```javascript
 import module1 from 'Module1';
 
@@ -54,9 +56,9 @@ You must make annotations in your code to mark if a function is for server-side 
 // @universal
 ```
 
-## Package definition
+## Package
 You must define your package in package.json. Just like NPM!
-```
+```json
 {
   "name": "slim",
   "description": "Slim is a package/dependency manager for JavaScript that does function "shaking.",
@@ -114,5 +116,10 @@ Official repository:
 
 
 ### maintainers
-
-[PackageDefinition]: ./PackageDefinition.md
+Maintainers of your package:
+```json
+[{
+  "name": "Tingan Ho",
+  "email": "tingan87@gmail.com"
+}]
+```
