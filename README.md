@@ -4,9 +4,9 @@ SLIM
 Slim is a package/dependency manager for JavaScript. It analyze your code to efficiently shake off non-used function. It is also the ES6+ package manager for Client-Server Rendered Applications.
 
 ## Contents
-[Module](#module)
-[Annotations](#annotations)
-[Package](#package)
+ * [Module](#module)
+ * [Annotations](#annotations)
+ * [Package](#package)
 
 ## Module
 ```javascript
@@ -114,7 +114,6 @@ Official repository:
 }
 ```
 
-
 ### maintainers
 Maintainers of your package:
 ```json
@@ -122,4 +121,28 @@ Maintainers of your package:
   "name": "Tingan Ho",
   "email": "tingan87@gmail.com"
 }]
+```
+
+### dependencies
+Dependencies for your package:
+```json
+{
+  "slim": "^1.0.0"
+}
+```
+
+### devDependencies
+Development dependencies for your package:
+```json
+{
+  "slim": "^1.0.0"
+}
+```
+
+### peerDependencies
+Peer dependencies for your package:
+```json
+{
+  "slim": "^1.0.0"
+}
 ```
