@@ -1,25 +1,25 @@
-SLIM
+CSM
 ====
 
-Slim is a package manager for Typescript. It analyze your code to efficiently shake off non-used function. It is also a package manager for Client-Server Rendered Applications. It allows pre-processing code block inclusion for each platform—client or server. It addresses some of the big problem with node applications being very heavy in code. Each member of this package management tool must pay a yearly fee—this fee is later shared through module owners and maintainers. The formula for sharing revenue is based on the amount of code and popularity of the module.
+CSM is a package manager for Typescript and stands for Client-Server Modules. It analyze your code to efficiently shake off non-used function. It is also a package manager for Client-Server Rendered Applications. It allows pre-processing code block inclusion for each platform—client or server. It addresses some of the big problem with node applications being very heavy in code. Each member of this package management tool must pay a yearly fee—this fee is later shared through module owners and maintainers. The formula for sharing revenue is based on the amount of code and popularity of the module.
 
 ## Contents
  * [Installation](#installation)
- * [Function shaking](#function-shaking)
+ * [Function Shaking](#function-shaking)
  * [Annotations](#annotations)
- * [Module configurations](ModuleConfigurations.md)
+ * [Module Configurations](ModuleConfigurations.md)
  * [Implementation](#implementation)
  * [CLI Methods](#cli-methods)
 
 ## Installation
 ```
-npm install slim -g
+npm install csm -g
 ```
 
 ## Function Shaking
 ```typescript
 module Application {
-  export default class Slim {
+  export default class CSM{
     test1() {
       ...
     },
@@ -46,8 +46,8 @@ If I later decides in an another file to only use method `test3()`. Then, method
 ```javascript
 /// @requires Application
 
-var slim = new Application.Slim();
-slim.test3();
+var csm = new Application.CSM();
+csm.test3();
 ```
 
 ## Annotations
@@ -79,22 +79,22 @@ Requires a module.
 ```
 ## Implementation
 
-Slim uses TypeScript's compiler API to compile files. Though it uses its' own internal API:s to do some pre-processing first. The pre-processing steps includes function shaking and conditional include filtering.
+CSM uses TypeScript's compiler API to compile files. Though it uses its' own internal API:s to do some pre-processing first. The pre-processing steps includes function shaking and conditional include filtering.
 
 ## CLI methods
 
 ### install
-`slim install` will install all your modules.
+`csm install` will install all your modules.
 
-`slim install <module_name>` will install `module_name`.
+`csm install <module_name>` will install `module_name`.
 
-`slim install <module_name> -g` will install `module_name` globally.
+`csm install <module_name> -g` will install `module_name` globally.
 
-The installation folder for all modules would be defined in your `slim.json` file. It uses
+The installation folder for all modules would be defined in your `csm.json` file. It uses
 
 ### publish
-`slim publish` will publish your module to a public repo.
+`csm publish` will publish your module to a public repo.
 
 ### test
 
-`slim test` will both performance and unit test your module. It will also the offical slim repo so that the version of your module follows semver.
+`csm test` will both performance and unit test your module. It will also the offical CSM repo so that the version of your module follows semver.
