@@ -43,6 +43,7 @@ If I later decides in an another file to only use method `test3()`. Then, method
 
 ```javascript
 /// <reference path="Application" />
+
 var slim = new Application.Slim();
 slim.test3();
 ```
