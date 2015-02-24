@@ -1,12 +1,13 @@
 SLIM
 ====
 
-Slim is a package manager for Typescript. It analyze your code to efficiently shake off non-used function. It is also a package manager for Client-Server Rendered Applications. It allows pre-processing code block inclusion for each platform—client or server. It addresses some of the big problem with node applications being very heavy in code. Each member of this package management tool must pay a yearly fee—this fee is later shared through module owners and maintainers. The formula for sharing fee is based on the amount of code and popularity.
+Slim is a package manager for Typescript. It analyze your code to efficiently shake off non-used function. It is also a package manager for Client-Server Rendered Applications. It allows pre-processing code block inclusion for each platform—client or server. It addresses some of the big problem with node applications being very heavy in code. Each member of this package management tool must pay a yearly fee—this fee is later shared through module owners and maintainers. The formula for sharing revenue is based on the amount of code and popularity of the module.
 
 ## Contents
  * [Module](#module)
  * [Annotations](#annotations)
  * [Package](#package)
+ * [Implementation](#implementation)
 
 ## Module
 ```javascript
@@ -44,18 +45,18 @@ You must make annotations in your code to mark if a function is for server-side 
 
 ### Client-side usage:
 ```
-/// if client
-/// end if
+/// @if client
+/// @endif
 ```
 
 ### Server-side usage:
 ```
-/// if server
-/// endif
+/// @if server
+/// @endif
 ```
 
-## Package
-You must define your package in package.json. Just like NPM!
+## Slim Configuration
+You must define your package in `slim.json`.
 ```json
 {
   "name": "slim",
@@ -144,3 +145,7 @@ Peer dependencies for your package:
   "slim": "^1.0.0"
 }
 ```
+
+## Implementation
+
+Slim uses TypeScript's compiler API to compile files. Though it uses its' own internal API:s to do some pre-processing first. The pre-processing steps includes function shaking and conditional include filtering.
