@@ -27,11 +27,13 @@ module Application {
     },
     /// @endif
 
+
+    /// @if client
     // Private function
-    // @client
     test3_() {
       ...
     }
+    /// @endif
   }
 }
 
@@ -84,3 +86,5 @@ Slim uses TypeScript's compiler API to compile files. Though it uses its' own in
 `slim publish` will publish your module to a public repo.
 
 ### test
+
+`slim test` will both performance and unit test your module. It will also check with the offical slim repo so that the version of your module conforms to semver.
