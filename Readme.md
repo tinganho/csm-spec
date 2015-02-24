@@ -70,8 +70,9 @@ You must make annotations in your code to mark if a function is for server-side 
 
 ### Requires
 Requires a module.
+```
 /// @requires <name>
-
+```
 ## Implementation
 
 Slim uses TypeScript's compiler API to compile files. Though it uses its' own internal API:s to do some pre-processing first. The pre-processing steps includes function shaking and conditional include filtering.
