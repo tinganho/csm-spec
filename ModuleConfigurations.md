@@ -23,7 +23,8 @@ You must define your package in `slim.json`.
   "devDepencies": {
     "test": "2.0.1"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "moduleFolder": "modules"
 }
 ```
 
@@ -90,3 +91,6 @@ Peer dependencies for your package:
   "slim": "^1.0.0"
 }
 ```
+
+### moduleFolder
+The name of your module folder.

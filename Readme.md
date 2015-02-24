@@ -8,7 +8,7 @@ Slim is a package manager for Typescript. It analyze your code to efficiently sh
  * [Annotations](#annotations)
  * [Module configurations](ModuleConfigurations.md)
  * [Implementation](#implementation)
- * [CLI Methods](#cli)
+ * [CLI Methods](#cli-methods)
 
 ## Module
 ```typescript
@@ -83,9 +83,11 @@ Slim uses TypeScript's compiler API to compile files. Though it uses its' own in
 
 `slim install <module_name> -g` will install `module_name` globally.
 
+The installation folder for all modules would be defined in your `slim.json` file. It uses
+
 ### publish
 `slim publish` will publish your module to a public repo.
 
 ### test
 
-`slim test` will both performance and unit test your module. It will also check with the offical slim repo so that the version of your module conforms to semver.
+`slim test` will both performance and unit test your module. It will also the offical slim repo so that the version of your module follows semver.
