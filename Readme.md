@@ -75,7 +75,9 @@ Slim uses TypeScript's compiler API to compile files. Though it uses its' own in
 
 ### install
 `slim install` will install all your modules.
+
 `slim install <module_name>` will install `module_name`.
+
 `slim install <module_name> -g` will install `module_name` globally.
 
 ### publish

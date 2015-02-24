@@ -93,3 +93,6 @@ Peer dependencies for your package:
 
 ### scripts
 Define which scripts that are executables.
+{
+  "test": "node test.js"
+}
