@@ -4,11 +4,17 @@ SLIM
 Slim is a package manager for Typescript. It analyze your code to efficiently shake off non-used function. It is also a package manager for Client-Server Rendered Applications. It allows pre-processing code block inclusion for each platform—client or server. It addresses some of the big problem with node applications being very heavy in code. Each member of this package management tool must pay a yearly fee—this fee is later shared through module owners and maintainers. The formula for sharing revenue is based on the amount of code and popularity of the module.
 
 ## Contents
+ * [Installation](#installation)
  * [Function shaking](#function-shaking)
  * [Annotations](#annotations)
  * [Module configurations](ModuleConfigurations.md)
  * [Implementation](#implementation)
  * [CLI Methods](#cli-methods)
+
+## Installation
+```
+npm install slim -g
+```
 
 ## Function Shaking
 ```typescript
@@ -19,15 +25,13 @@ module Application {
     },
 
     /// @if client
-    // Public functions
+    /// @public
     test2() {
       this.test();
     },
     /// @endif
 
-
     /// @if client
-    // Private function
     test3_() {
       ...
     }
