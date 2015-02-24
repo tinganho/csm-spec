@@ -8,35 +8,40 @@ Slim is a package manager for Typescript. It analyze your code to efficiently sh
  * [Annotations](#annotations)
  * [Module configurations](ModuleConfigurations.md)
  * [Implementation](#implementation)
+ * [CLI Methods](#cli)
 
 ## Module
-```javascript
-import module1 from 'Module1';
+```typescript
+/// <reference path="Test.ts" />
 
-export default class Slim {
-  test1() {
-    ...
-  },
+module Application {
+  export default class Slim {
+    test1() {
+      ...
+    },
 
-  /// @if client
-  // Public functions
-  test2() {
-    this.test();
-  },
-  /// @endif
+    /// @if client
+    // Public functions
+    test2() {
+      this.test();
+    },
+    /// @endif
 
-  // Private function
-  // @client
-  test3_() {
-    ...
+    // Private function
+    // @client
+    test3_() {
+      ...
+    }
   }
 }
+
 ```
 
 If I later decides in an another file to only use method `test3()`. Then, method `test2()` will not be compiled. Assuming that only two files are used through out your application.
 
 ```javascript
-import slim from 'Slim';
+/// <reference path="Application" />
+var slim = new Application.Slim();
 slim.test3();
 ```
 
@@ -65,3 +70,15 @@ You must make annotations in your code to mark if a function is for server-side 
 ## Implementation
 
 Slim uses TypeScript's compiler API to compile files. Though it uses its' own internal API:s to do some pre-processing first. The pre-processing steps includes function shaking and conditional include filtering.
+
+## CLI methods
+
+### install
+`slim install` will install all your modules.
+`slim install <module_name>` will install `module_name`.
+`slim install <module_name> -g` will install `module_name` globally.
+
+### publish
+`slim publish` will publish your module to a public repo.
+
+### test

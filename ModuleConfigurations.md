@@ -90,3 +90,6 @@ Peer dependencies for your package:
   "slim": "^1.0.0"
 }
 ```
+
+### scripts
+Define which scripts that are executables.
