@@ -1,10 +1,10 @@
 # Configurations
 
-## Slim Configuration
-You must define your package in `slim.json`.
+## CSM Configuration
+You must define your package in `csm.json`.
 ```json
 {
-  "name": "slim",
+  "name": "Slim",
   "description": "Slim is a package/dependency manager ...",
   "exports": "Slim",
   "version": "2.0.1",
