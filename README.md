@@ -18,12 +18,12 @@ export default class Slim {
     ...
   },
 
-  /// if client
+  /// @if client
   // Public functions
   test2() {
     this.test();
   },
-  /// endif
+  /// @endif
 
   // Private function
   // @client
@@ -52,6 +52,13 @@ You must make annotations in your code to mark if a function is for server-side 
 ### Server-side usage:
 ```
 /// @if server
+/// @endif
+```
+
+### Server-side or client side usage:
+```
+/// @if server
+/// @else
 /// @endif
 ```
 
