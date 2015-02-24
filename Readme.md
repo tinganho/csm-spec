@@ -12,8 +12,6 @@ Slim is a package manager for Typescript. It analyze your code to efficiently sh
 
 ## Function Shaking
 ```typescript
-/// @module Test
-
 module Application {
   export default class Slim {
     test1() {
@@ -42,7 +40,7 @@ module Application {
 If I later decides in an another file to only use method `test3()`. Then, method `test2()` will not be compiled. Assuming that only two files are used through out your application.
 
 ```javascript
-/// @module Application
+/// @requires Application
 
 var slim = new Application.Slim();
 slim.test3();
@@ -69,6 +67,10 @@ You must make annotations in your code to mark if a function is for server-side 
 /// @else
 /// @endif
 ```
+
+### Requires
+Requires a module.
+/// @requires <name>
 
 ## Implementation
 
