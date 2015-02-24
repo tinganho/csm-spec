@@ -6,7 +6,7 @@ Slim is a package manager for Typescript. It analyze your code to efficiently sh
 ## Contents
  * [Module](#module)
  * [Annotations](#annotations)
- * [Package](Configurations.md)
+ * [Module configurations](ModuleConfigurations.md)
  * [Implementation](#implementation)
 
 ## Module
