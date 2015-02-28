@@ -71,6 +71,9 @@ CSM keep track of all functions in your source code and keeps a function tree. I
 
 All function nodes in this tree have start positions and end positions. So it know exactly how to strip off non-used functions from your source code.
 
+### Source-mapping
+For those who want to enable source-map support might think it will be an issue during strip off. But we solve this issue by having a strip-off-map applied on top of the source-map.
+
 ## Annotations
 You must make annotations in your code to mark if a function is for server-side or client-side usage.
 
