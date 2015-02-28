@@ -41,14 +41,35 @@ module Application {
 
 ```
 
-If I later decides in an another file to only use method `test3()`. Then, method `test2()` will not be compiled. Assuming that only two files are used through out your application.
-
 ```typescript
 /// @requires Application
 
 var csm = new Application.CSM();
 csm.test3();
 ```
+
+If I later decides in an another file to only use method `test3()`. Then, method `test2()` will not be compiled. Assuming that only two files are used through out your application.
+
+### Function-tree
+CSM creates a function tree of your source code. Then, depending on which function you use — CSM shake offs the non-used ones.
+
+Let us take an example of three functions — called `function1`, `function2` and `function3`. `function1` depends on `function2`.
+
+```
+|
+—— function1(public)
+|   |
+|   -— function2(private)
+|
+—— function3(public)
+
+```
+
+If I later, decides to only use `function3` through out my source code. Then, `function1` and `function2` gets deleted.
+
+CSM keep track of all functions in your source code and keeps a function tree. It strips all your functions from your source code before running the TypeScript compiler.
+
+All function nodes in this tree have start positions and end positions. So it know exactly how to strip off non-used functions from your source code.
 
 ## Annotations
 You must make annotations in your code to mark if a function is for server-side or client-side usage.
